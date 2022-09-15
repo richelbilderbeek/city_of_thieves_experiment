@@ -32,3 +32,4 @@
 *.app
 test_data.csv
 .Rhistory
+Rplots.pdf
