@@ -27,8 +27,10 @@ for (i in seq_len(n_characters)) {
   advantage <- 0
   # A luck potion gives an advantage
   if (t$potion[1] == "luck") advantage <- advantage + 0.1
-  # Having high skill does give an advantage
-  advantage <- advantage + ((t$skill[1] - 7) * 0.1)
+  # Having high skill, luck, condition  does give an advantage
+  advantage <- advantage + ((t$skill[1] - 7) * 0.05)
+  advantage <- advantage + ((t$luck[1] - 10) * 0.03)
+  advantage <- advantage + ((t$condition[1] - 6) * 0.01)
   
   t$p_start_1 <- t$p_start_1 + advantage
   t$p_start_2 <- t$p_start_2 + advantage
