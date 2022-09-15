@@ -17,8 +17,8 @@ for (i in seq_len(n_characters)) {
   t$p_start_2 <- runif(n = nrow(t), min = 0.4, max = 0.6)
   t$p_start_3 <- runif(n = nrow(t), min = 0.3, max = 0.5)
   t$p_clock_street <- runif(n = nrow(t), min = 0.5, max = 0.7)
-  t$p_key_street <- runif(n = nrow(t), min = 0.4, max = 0.6)
-  t$p_market_street <- runif(n = nrow(t), min = 0.3, max = 0.5)
+  t$p_key_street <- runif(n = nrow(t), min = 0.5, max = 0.6)
+  t$p_market_street <- runif(n = nrow(t), min = 0.4, max = 0.7)
   t$p_wrong_final_choice_1 <- runif(n = nrow(t), min = exp(-t$t), max = 0.1)
   t$p_wrong_final_choice_2 <- runif(n = nrow(t), min = exp(-t$t), max = 0.1)
   

@@ -6,5 +6,5 @@ test_fig_1.png: test_data.csv
 test_fig_2.png: test_data.csv
 	Rscript create_fig_2.R test_data.csv test_fig_2.png
 
-test_data.csv:
+test_data.csv: create_test_data.R
 	Rscript create_test_data.R
