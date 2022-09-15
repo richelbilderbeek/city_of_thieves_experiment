@@ -23,6 +23,20 @@ for (i in seq_len(n_characters)) {
   t$p_wrong_final_choice_1 <- runif(n = nrow(t), min = exp(-t$t), max = 0.1)
   t$p_wrong_final_choice_2 <- runif(n = nrow(t), min = exp(-t$t), max = 0.1)
   
+  # advantage
+  advantage <- 0
+  # A luck potion gives an advantage
+  if (t$potion[1] == "luck") advantage <- advantage + 0.1
+  # Having high skill does give an advantage
+  advantage <- advantage + ((t$skill[1] - 7) * 0.1)
+  
+  t$p_start_1 <- t$p_start_1 + advantage
+  t$p_start_2 <- t$p_start_2 + advantage
+  t$p_start_3 <- t$p_start_3 + advantage
+  t$p_clock_street <- t$p_clock_street + advantage
+  t$p_key_street <- t$p_key_street + advantage
+  t$p_market_street <- t$p_market_street + advantage
+
   payoffs_list[[i]] <- t
 }
 
