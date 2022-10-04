@@ -1,7 +1,7 @@
 INCLUDEPATH += ../../city_of_thieves/Classes
+INCLUDEPATH += ../../city_of_thieves/Files
 include(../../city_of_thieves/Classes/CityOfThievesConsole.pri)
 include(../../city_of_thieves/Files/Files.pri)
-SOURCES += main_test.cpp
 
 # C++17
 CONFIG += c++17
@@ -61,7 +61,6 @@ QT -= core gui widgets
 #   BOOST_DEFINE_MATH_CONSTANT(half, 5.000000000000000000000000000000000000e-01, "5.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-01")
 #   ^
 #QMAKE_CXXFLAGS += -fext-numeric-literals
-
 
 SOURCES += \
         main.cpp
