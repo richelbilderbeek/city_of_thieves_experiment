@@ -5,16 +5,18 @@
 
 int main()
 {
-  const int n_runs{100};
+  // Best character: 8/1000 deaths
+  // Worst character: 999/1000 deaths
+  const int n_runs{1000};
   int n_dead{0};
   for(int seed{0}; seed != n_runs; ++seed)
   {
-    const Character character{GetBestCharacter()};
+    const Character character{GetWorstCharacter()};
     const bool silent{true};
     const std::vector<int> route{GetWinningRoute()};
     Walkthrough w(seed, character,silent,route);
     const Character final{w.Run()};
-    if (final.IsDead()) ++n_dead;
+    if (IsDead(final)) ++n_dead;
   }
   std::cout << n_dead << "/" << n_runs << '\n';
 }
